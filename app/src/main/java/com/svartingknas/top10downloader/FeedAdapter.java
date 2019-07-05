@@ -1,6 +1,7 @@
 package com.svartingknas.top10downloader;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,10 +33,12 @@ public class FeedAdapter extends ArrayAdapter {
         ViewHolder viewHolder;
 
         if (convertView == null) {
+            Log.d(TAG, "getView: getView: called with nullconvertView");
             convertView = layoutInflater.inflate(layoutResource, parent, false);
             viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
         } else {
+            Log.d(TAG, "getView: getView provided a convertView");
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
