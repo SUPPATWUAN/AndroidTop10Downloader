@@ -4,7 +4,6 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.io.*;
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d(TAG, "onCreate: Starting Asynctask");
         DownloadData downloadData =  new DownloadData();
-        downloadData.execute("http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topMovies/limit=10/xml");
+        downloadData.execute("http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topMovies/limit=25/xml");
         Log.d(TAG, "onCreate: Done");
 
     }
